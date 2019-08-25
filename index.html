@@ -10,22 +10,7 @@
 <body>
   <nav class="nav-bar"></nav>
   <div class="app">
-    <section class="product">
-      <div class="product-image">
-        <a :href="link">
-
-          <img :src="image" >
-        </a>
-      </div>      
-
-      <div claqss="product-info">
-        <h1>{{ product }}</h1>
-        <p>{{ description }}</p>
-        <p v-show="inventory > 10">In Stock</p>
-        <p v-show="inventory <= 10 && inventory > 0">Almost out of stock!</p>
-        <p v-show="inventory <= 0">Out of Stock</p>
-      </div>
-    </section>
+    <product :premium="premium"></product>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
